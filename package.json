@@ -1,0 +1,17 @@
+{
+  "name": "grateful-gamma",
+  "type": "module",
+  "version": "0.0.1",
+  "scripts": {
+    "dev": "astro dev",
+    "start": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview",
+    "astro": "astro"
+  },
+  "dependencies": {
+    "@astrojs/netlify": "^5.1.2",
+    "astro": "^4.4.2",
+    "hotkeypad": "0.1.0"
+  }
+}

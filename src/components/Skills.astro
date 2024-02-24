@@ -1,0 +1,80 @@
+---
+import { skills } from "@cv";
+import Html from "@/components/Icon/Html.astro";
+import Vue from "@/components/Icon/Vue.astro";
+import React from "@/components/Icon/React.astro";
+import Cypress from "@/components/Icon/Cypress.astro";
+import Wordpress from "@/components/Icon/Wordpress.astro";
+import Php from "@/components/Icon/Php.astro";
+import Laravel from "@/components/Icon/Laravel.astro";
+import MySQL from "@/components/Icon/MySQL.astro";
+import Git from "@/components/Icon/Git.astro";
+import Linux from "@/components/Icon/Linux.astro";
+
+const SKILLS_ICONS = [
+  Html,
+  Vue,
+  React,
+  Cypress,
+  Wordpress,
+  Php,
+  Laravel,
+  MySQL,
+  Git,
+  Linux,
+];
+---
+
+<section>
+  <h1>Habilidades</h1>
+  <ul>
+    {
+      skills.map(({ name, level, keywords }, index) => {
+        const Icon = SKILLS_ICONS[index] || "div";
+        return (
+          <li>
+            <div class="text-skill">
+              <Icon />
+              <span>{name}</span>
+            </div>
+            <div class="info-skill">
+              {keywords.map((word) => {
+                return <span class="keyboards">{word}</span>;
+              })}
+              <span class="level">{level}</span>
+            </div>
+          </li>
+        );
+      })
+    }
+  </ul>
+</section>
+
+<style>
+  li {
+    margin: 5px 0;
+    display: flex;
+    justify-content: space-between;
+  }
+
+  .text-skill > span {
+    align-self: flex-start;
+  }
+
+  .info-skill > span {
+    align-self: flex-end;
+    color: #555;
+    font-size: 0.85rem;
+    margin-right: 10px;
+  }
+
+  .level {
+    font-weight: bold;
+  }
+
+  @media (width <= 700px) {
+    .keyboards {
+      display: none;
+    }
+  }
+</style>

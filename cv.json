@@ -1,0 +1,200 @@
+{
+  "basics": {
+    "name": "Paula Pereyra",
+    "label": "Desarrolladora front-end",
+    "image": "./img/profile.webp",
+    "email": "paulapereyrallorens@gmail.com",
+    "url": "",
+    "summary": "Mi trayectoria profesional de más de 2 años en el desarrollo web incluye experiencias en una empresa y como freelance creando páginas web. Siempre estoy en la búsqueda de nuevas habilidades y conocimientos que pueda aplicar en mis proyectos. El desarrollo móvil es una rama que también me apasiona. Fuera del trabajo, disfruto practicando deportes y dedicando tiempo a ver series y películas.",
+    "location": {
+      "address": "",
+      "postalCode": "",
+      "city": "Entre Ríos",
+      "countryCode": "AR",
+      "region": "Argentina"
+    },
+    "profiles": [
+      {
+        "network": "LinkedIn",
+        "username": "paula-pereyra",
+        "url": "https://www.linkedin.com/in/paula-pereyra-b1031622a"
+      },
+      {
+        "network": "GitHub",
+        "username": "PereyraPaula",
+        "url": "https://github.com/PereyraPaula"
+      }
+    ]
+  },
+  "work": [
+    {
+      "name": "Freelance",
+      "position": "Fullstack",
+      "url": "https://www.contenidosonline.com.ar/",
+      "startDate": "Sept 2023",
+      "endDate": null,
+      "summary": "Desarrollos de paginas en su mayoría institucionales. Hechas con Wordpress como CMS. También haciendo mantenimiento a algunas de estas páginas realizadas.",
+      "highlights": []
+    },
+    {
+      "name": "Xirect Software Solutions",
+      "position": "Frontend developer",
+      "url": "https://www.xirect.com/",
+      "startDate": "Agos 2022",
+      "endDate": null,
+      "summary": "FullTime: Desarrollo de aplicaciones para clientes. Aptitudes: CSS, JS (Frameworks: Vue.js - usando Nuxt.js - y React con Typescript). Testing: Cypress.io. Actualmente trabajando a tiempo parcial.",
+      "highlights": []
+    },
+    {
+      "name": "Municipalidad de Gualeguaychú",
+      "position": "Pasantía",
+      "url": "https://gualeguaychu.gov.ar/",
+      "startDate": "Oct 2021",
+      "endDate": "Ago 2022",
+      "summary": "Programadora en oficina de gobierno local como pasante junior. Uso de lenguajes como HTML, CSS, JQuery y PHP y MVC como patrón de arquitectura de software. Mantenimiento y agregado de funciones a la aplicacion Gualeactiva.",
+      "highlights": []
+    }
+  ],
+  "volunteer": [],
+  "education": [
+    {
+      "institution": "Instituto Sedes Sapientiae",
+      "url": "",
+      "area": "Tecnicatura Superior en Análisis y Desarrollo de Software ",
+      "studyType": "",
+      "startDate": "2019-03-01",
+      "endDate": "2021-12-01",
+      "score": "",
+      "courses": []
+    }
+  ],
+  "awards": [],
+  "certificates": [],
+  "publications": [],
+  "skills": [
+    {
+      "name": "HTML / CSS / Javascript",
+      "level": "2 años",
+      "keywords": [
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Vue",
+      "level": "1 año",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "React",
+      "level": "1 año",
+      "keywords": [
+        "Desarrollo Web",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Cypress",
+      "level": "1 año",
+      "keywords": [
+        "Testing",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Wordpress",
+      "level": "1 año",
+      "keywords": [
+        "Content management system",
+        "Frontend"
+      ]
+    },
+    {
+      "name": "Php",
+      "level": "1 año",
+      "keywords": [
+        "Backend"
+      ]
+    },
+    {
+      "name": "Laravel",
+      "level": "-",
+      "keywords": [
+        "Backend"
+      ]
+    },
+    {
+      "name": "MySQL",
+      "level": "1 año",
+      "keywords": [
+        "Base de datos"
+      ]
+    },
+    {
+      "name": "Git",
+      "level": "2 años",
+      "keywords": [
+        "Gestión de Proyectos y Desarrollo"
+      ]
+    },
+    {
+      "name": "Linux",
+      "level": "+2 años",
+      "keywords": [
+        "Gestión de Proyectos y Desarrollo"
+      ]
+    }
+  ],
+  "languages": [
+    {
+      "language": "Español",
+      "fluency": "Hablante nativo"
+    },
+    {
+      "language": "Inglés",
+      "fluency": "Solo lectura"
+    }
+  ],
+  "interests": [
+    {
+      "name": "",
+      "keywords": []
+    }
+  ],
+  "references": [],
+  "projects": [
+    {
+      "name": "Zonis y Asociados",
+      "isActive": true,
+      "description": "Estudio contable",
+      "highlights": [
+        "Wordpress"
+      ],
+      "url": "https://zonisyasociados.com.ar/",
+      "github": ""
+    },
+    {
+      "name": "Multipago",
+      "isActive": true,
+      "description": "Pagina institucional de empresa de servicio de cobro.",
+      "highlights": [
+        "Wordpress"
+      ],
+      "url": "https://www.multipago.com.ar/",
+      "github": ""
+    },
+    {
+      "name": "Contenidosonline",
+      "isActive": true,
+      "description": "Web hosting, Consultoría Linux y Programación Web",
+      "highlights": [
+        "Hugo",
+        "CSS"
+      ],
+      "url": "https://www.contenidosonline.com.ar/",
+      "github": ""
+    }
+  ]
+}
