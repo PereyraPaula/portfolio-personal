@@ -195,6 +195,17 @@
       ],
       "url": "https://www.contenidosonline.com.ar/",
       "github": ""
+    },
+    {
+      "name": "VakoSRL",
+      "isActive": true,
+      "description": "Web Auto-Administrable que permite la publicación de viajes de cargas para transportistas.",
+      "highlights": [
+        "Wordpress",
+        "PHP (Plugins)"
+      ],
+      "url": "https://vakosrl.com.ar",
+      "github": ""
     }
   ]
 }

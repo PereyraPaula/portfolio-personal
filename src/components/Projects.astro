@@ -34,6 +34,17 @@ import Github from "@/components/Icon/Github.astro";
                     )}
                   </h3>
                   <p>{description}</p>
+                  {name === "VakoSRL" ? (
+                    <p>
+                      Hecho junto a{" "}
+                      <a
+                        href="https://www.linkedin.com/in/agust%C3%ADn-alejandro-monzon-0026ba45/"
+                        target="_blank"
+                      >
+                        Agustin Monzón
+                      </a>
+                    </p>
+                  ) : null}
                 </header>
                 <footer>
                   {highlights.map((highlight) => {
