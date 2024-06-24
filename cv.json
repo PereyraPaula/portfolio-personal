@@ -206,6 +206,17 @@
       ],
       "url": "https://vakosrl.com.ar",
       "github": ""
+    },
+    {
+      "name": "Blog personal",
+      "isActive": true,
+      "description": "Rincón donde publico las cosas que vaya aprendiendo.",
+      "highlights": [
+        "11ty",
+        "Bootstrap, HTML (Ejs), JS"
+      ],
+      "url": "https://pereyrapaula.github.io/blog-personal/",
+      "github": "https://github.com/PereyraPaula/blog-personal"
     }
   ]
 }
