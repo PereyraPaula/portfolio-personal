@@ -17,12 +17,14 @@
       {
         "network": "LinkedIn",
         "username": "paula-pereyra",
-        "url": "https://www.linkedin.com/in/paula-pereyra-4b3127327"
+        "url": "https://www.linkedin.com/in/paula-pereyra-4b3127327",
+        "show": false
       },
       {
         "network": "GitHub",
         "username": "PereyraPaula",
-        "url": "https://github.com/PereyraPaula"
+        "url": "https://github.com/PereyraPaula",
+        "show": true
       }
     ]
   },
@@ -180,7 +182,8 @@
       "isActive": true,
       "description": "Pagina institucional de empresa de servicio de cobro.",
       "highlights": [
-        "Wordpress"
+        "Wordpress",
+        { "name": "PHP (Plugins)", "description": "Creación de un buscador de sucursales y su visualización en el mapa." }
       ],
       "url": "https://www.multipago.com.ar/",
       "github": ""
@@ -190,7 +193,7 @@
       "isActive": true,
       "description": "Web hosting, Consultoría Linux y Programación Web",
       "highlights": [
-        "Hugo",
+        "Hugo (HTML, JS)",
         "CSS"
       ],
       "url": "https://www.contenidosonline.com.ar/",
@@ -202,7 +205,7 @@
       "description": "Web Auto-Administrable que permite la publicación de viajes de cargas para transportistas.",
       "highlights": [
         "Wordpress",
-        "PHP (Plugins)"
+        { "name": "PHP (Plugins)", "description": "Creación de un post personalizado para cargar datos especificos de las cargas." }
       ],
       "url": "https://vakosrl.com.ar",
       "github": ""

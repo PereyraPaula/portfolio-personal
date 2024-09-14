@@ -1,6 +1,7 @@
 ---
 import { projects } from "@cv";
 import Github from "@/components/Icon/Github.astro";
+import Information from "@/components/Icon/Information.astro";
 ---
 
 <section>
@@ -35,20 +36,26 @@ import Github from "@/components/Icon/Github.astro";
                   </h3>
                   <p>{description}</p>
                   {name === "VakoSRL" ? (
-                    <p>
+                    <span style="font-size: 10px; color: var(--color-text)">
                       Hecho junto a{" "}
                       <a
                         href="https://www.linkedin.com/in/agust%C3%ADn-alejandro-monzon-0026ba45/"
                         target="_blank"
+                        class="link"
                       >
                         Agustin Monzón
                       </a>
-                    </p>
+                    </span>
                   ) : null}
                 </header>
                 <footer>
-                  {highlights.map((highlight) => {
-                    return <span>{highlight}</span>;
+                  {highlights.map((highlight: string | { name: string, description: string }) => {
+                    return typeof highlight === 'string' 
+                      ? <span class="tech-info">{highlight}</span>
+                      : <span title={highlight.description} class="tech-info" style="cursor: pointer;">
+                        <Information width="16px" height="16px" />
+                        {highlight.name}
+                      </span>;
                   })}
                 </footer>
               </article>
@@ -66,16 +73,18 @@ import Github from "@/components/Icon/Github.astro";
     grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
     gap: 1rem;
     margin-inline: -16px;
+    margin-bottom: 5rem;
   }
 
   article {
     border-radius: 8px;
-    border: 1px solid #f2f2f2;
+    border: 1px solid var(--accent-color);
     gap: 16px;
     display: flex;
     flex-direction: column;
     padding: 16px;
     height: 100%;
+    margin: 1rem 0;
   }
 
   article header {
@@ -84,10 +93,11 @@ import Github from "@/components/Icon/Github.astro";
 
   article h3 {
     margin-bottom: 4px;
+    font-weight: 500;
   }
 
   article a {
-    color: #111;
+    color: var(--bold-text);
   }
 
   article a:hover {
@@ -95,9 +105,10 @@ import Github from "@/components/Icon/Github.astro";
   }
 
   article p {
-    font-size: 0.75rem;
+    font-size: 0.84rem;
     line-height: 1.2rem;
     margin-bottom: 4px;
+    letter-spacing: 1.4px;
   }
 
   article h3 span {
@@ -117,15 +128,26 @@ import Github from "@/components/Icon/Github.astro";
 
   footer span {
     border-radius: 6px;
-    background: #eee;
-    color: #444;
-    font-size: 0.6rem;
-    font-weight: 500;
+    background: var(--accent-color);
+    color: white;
+    font-size: 0.65rem;
+    text-transform: uppercase;
     padding: 0.2rem 0.6rem;
   }
 
   .github-code-link {
     margin-left: 5px;
+  }
+
+  a.link {
+    color: var(--accent-color) !important;
+  }
+
+  .tech-info {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 5px;
   }
 
   @keyframes flicker {

@@ -4,6 +4,7 @@ import LinkedIn from "@/components/Icon/LinkedIn.astro";
 import Github from "@/components/Icon/Github.astro";
 import Email from "@/components/Icon/Email.astro";
 import World from "@/components/Icon/World.astro";
+import ToggleTheme from "@/components/Icon/ToggleTheme.astro";
 
 const { name, label, location, profiles, email, image } = basics;
 const { city, region } = location;
@@ -41,21 +42,29 @@ const CONTACT_ICONS = [LinkedIn, Github];
           )
         }
         {
-          profiles.map(({ network, url, username }, index) => {
+          profiles.map(({ network, url, username, show }, index) => {
             const Icon = CONTACT_ICONS[index] || "div";
 
             return (
-              <a
-                href={url}
-                title={`Visitar el perfil de ${name} en ${network}`}
-                target="_blank"
-                rel="noopener noreferrer"
-              >
-                <Icon class="icons" />
-              </a>
+              show && (
+                <a
+                  href={url}
+                  title={`Visitar el perfil de ${name} en ${network}`}
+                  target="_blank"
+                  rel="noopener noreferrer"
+                >
+                  <Icon class="icons" />
+                </a>
+              )
             );
           })
         }
+        <label class="changeThemeContainer" for="checkbox">
+          <input type="checkbox" id="checkbox" />
+          <button class="btn-toggle-theme" title="Cambiar tema de la página">
+            <ToggleTheme />
+          </button>
+        </label>
       </footer>
     </div>
     <figure>
@@ -63,14 +72,11 @@ const CONTACT_ICONS = [LinkedIn, Github];
         class="profile"
         src={image}
         alt={name}
-        width={150}
-        height={142}
         loading="eager"
       />
     </figure>
   </div>
 </section>
-
 <style>
   .container {
     display: flex;
@@ -88,21 +94,22 @@ const CONTACT_ICONS = [LinkedIn, Github];
     padding-right: 32px;
   }
 
-  h1 {
+  .info h1 {
     font-size: 2rem;
   }
 
   h2 {
-    color: #444;
+    color: var(--color-text);
     font-weight: 500;
     font-size: 1.1rem;
     text-wrap: balance;
   }
 
   img.profile {
-    aspect-ratio: 1 / 1;
+    aspect-ratio: 1/1;
     object-fit: cover;
-    width: 128px;
+    width: 140px;
+    height: 128px;
     border-radius: 16px;
   }
 
@@ -113,13 +120,12 @@ const CONTACT_ICONS = [LinkedIn, Github];
   }
 
   span {
-    color: #666;
-    font-size: 0.85rem;
-    letter-spacing: -0.05rem;
+    color: var(--color-text);
+    font-size: 0.8rem;
   }
 
   footer {
-    color: #555;
+    color: var(--color-text);
     font-size: 0.65rem;
     display: flex;
     gap: 4px;
@@ -127,11 +133,11 @@ const CONTACT_ICONS = [LinkedIn, Github];
   }
 
   footer a {
-    color: #777;
+    color: var(--accent-color);
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border: 1px solid #eee;
+    border: 1px solid var(--accent-color);;
     padding: 4px;
     height: 32px;
     width: 32px;
@@ -139,9 +145,32 @@ const CONTACT_ICONS = [LinkedIn, Github];
     transition: all 0.3s ease;
   }
 
+  input[type="checkbox"] {
+    display: none;
+  }
+
+  .changeThemeContainer button.btn-toggle-theme {
+    color: var(--accent-color);;
+    background: transparent;
+    border: 1px solid var(--accent-color);
+    border: 1px solid var(--accent-color);
+    padding: 4px;
+    height: 32px;
+    width: 32px;
+    border-radius: 6px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer button.btn-toggle-theme:hover {
+    cursor: pointer;
+    color: var(--accent-color);
+  }
+
   footer a:hover {
-    background: #eee;
-    border: 1px solid #ddd;
+    background-color: #eeeeee30;
+    border: 1px solid var(--accent-color);
   }
 
   .icons {
@@ -182,3 +211,21 @@ const CONTACT_ICONS = [LinkedIn, Github];
     }
   }
 </style>
+<script>
+  function toggleTheme() {
+    const currentTheme = document.documentElement.getAttribute('data-theme');
+    const newTheme = currentTheme === 'dark' ? 'light' : 'dark';
+    document.documentElement.setAttribute('data-theme', newTheme);
+    localStorage.setItem('theme', newTheme);
+  }
+
+  window.addEventListener('DOMContentLoaded', () => {
+    const savedTheme = localStorage.getItem('theme') || 'light';
+    document.documentElement.setAttribute('data-theme', savedTheme);
+
+    const checkbox: any = document.getElementById('checkbox');
+    checkbox.checked = savedTheme === 'dark';
+  });
+
+  document.querySelector(".btn-toggle-theme").addEventListener("click", toggleTheme)
+</script>
